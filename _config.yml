@@ -8,7 +8,7 @@ theme_settings:
   title: Type Theme
   avatar: assets/img/avatar.png
   favicon: assets/favicon.ico
-  gravatar: # Email MD5 hash
+  gravatar: 4cf5d01de7702d74a263aece01acac2d
   description: "A website with blog posts and pages" # used by search engines
 
   # Header and footer text
