@@ -24,33 +24,62 @@ matplotlib에게 그래프를 준비한다고 알려준다. 사실 그래프를 
 
 선 모양은 `ro`와 같이 설정하는데, 0번째 글자가 색, 그 후의 글자가 선 모양을 정한다.
 
-또한, kwarg로 그리는 곡선의 이름인 `label`을 받는데, `legend`에서 설명한다.
+또한, kwarg로 그리는 곡선의 이름인 `label`을 받는데, `legend`에서 설명한다. `label`은 아래 코드 예제에서 보듯 맨 마지막에 지정해야 한다.
 
 ### 예제 코드
 
 ```python
 import matplotlib.pyplot as plt
+plt.figure()
 plt.plot([1, 2, 3, 4])
 plt.plot([1, 2, 3, 4], [1, 2, 3, 4], 'ro') # red dots
+plt.plot([1, 2, 3, 4], [1, 2, 3, 4], 'ro', label='Some Graph') # red dots & a label
+plt.show()
 ```
 
 ## `xlabel`, `ylabel` ([API docs](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel))
 
 축에 붙일 레이블이다.
 
+### 예제 코드
+
+```python
+import matplotlib.pyplot as plt
+plt.figure()
+plt.xlabel('Axis X')
+plt.ylabel('Axis Y')
+plt.plot([1, 2, 3, 4])
+plt.show()
+```
+
 ## `axis` ([API Docs](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axis.html#matplotlib.pyplot.axis))
 
 y축, x축의 범위를 정하는 함수이다.
 
-### 사용법
+### 예제 코드
 
 ```python
-plt.axis([x_min, x_max, y_min, y_max])
+import matplotlib.pyplot as plt
+plt.figure()
+plt.axis([0, 1, 0, 5])
+plt.plot([1, 2, 3, 4])
+plt.show()
 ```
 
 ## `xlim`, `ylim` ([API docs](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlim.html#matplotlib.pyplot.xlim))
 
 x축, y축의 범위를 설정한다. `axis`로 이 함수가 하는일을 커버할 수 있다.
+
+### 예제 코드
+
+```python
+import matplotlib.pyplot as plt
+plt.figure()
+plt.xlim(0, 1)
+plt.ylim(0, 5)
+plt.plot([1, 2, 3, 4])
+plt.show()
+```
 
 ## `legend` ([API docs](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend))
 
